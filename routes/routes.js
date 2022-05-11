@@ -15,3 +15,9 @@ app.get('/users', (request,response) =>{
             response.send(result);    
     })
 })
+app.get('/users:id', (request,response) =>{
+    pool.query('Select * from users where id= ? ',id, (error,result)=>{
+        if (error) throw error ;
+            response.send(result);    
+    })
+})
