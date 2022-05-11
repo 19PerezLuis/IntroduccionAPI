@@ -21,3 +21,9 @@ app.get('/users:id', (request,response) =>{
             response.send(result);    
     })
 })
+app.get('/users', (request,response) =>{
+    pool.query('insert into users set ? ',request.body, (error,result)=>{
+        if (error) throw error ;
+            response.status(201).send(`user added with ID: ${result.insertid}`);    
+    })
+})
