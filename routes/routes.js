@@ -9,3 +9,9 @@ const router = app => {
     });
 
 }
+app.get('/users', (request,response) =>{
+    pool.query('Select * from users', (error,result)=>{
+        if (error) throw error ;
+            response.send(result);    
+    })
+})
