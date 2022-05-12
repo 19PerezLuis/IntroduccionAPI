@@ -1,6 +1,6 @@
 {
   "name": "proyectoexpress",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Practica 3: introduccion a API",
   "main": "app.js",
   "scripts": {
